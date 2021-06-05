@@ -61,7 +61,9 @@ from itertools import combinations
 #count(nums[0]) 그리고 각 세트의 카운트가 개수를 넘기만 하면 선택하는 걸로 하니까 그러면 되겟네
 #아니면 종류 수 줄여나가고
 
+#
 
+#
 else:
 
     result = int(len(set(nums)) / count)
@@ -74,7 +76,7 @@ def solution(nums):
 #    N/2 = 2
 
 # if else 대신 값을 넣어주는 것
-# 난 너무 어렵게 생각했다 -> 이유 set로 줄였을 때 이미 개수는 정해져있고 종류가 한정된 거니까. 문제에서 원하는 건 종류니가
+# 난 너무 어렵게 생각했다 -> 이유 set로 줄였을 때 이미 개수는 정해져있고 종류가 한정된 거니까. 문제에서 원하는 건 종류니가 문제의 눈으로 풀자
 # 종류를 리턴해주면 됬다 그리고 조합 개념이 정확해야 했다 선택한다고 가정하면 선택하는 거니까 그게 실제다
 
 
@@ -85,9 +87,11 @@ def solution(nums):
     if set_nums > count:
         result = count
     else:
+        # 미완성 풀이 나는 여기서 현재 set 종류의 각각의 개수만으로 count를 넘길 수 있는 지 체크하려고 했다. 조합의 개념활용 부족
+        # 개념 활용해서 문제 푸는 습관 필요
         count -= 1 #?
         #for i in range(len(set_nums)):
-            # 미완성 풀이 나는 여기서 현재 set 종류의 각각의 개수만으로 count를 넘길 수 있는 지 체크하려고 했다.
+
 
     return result
 
