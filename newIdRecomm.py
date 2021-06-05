@@ -7,7 +7,7 @@ def solution(new_id):
     new_id = new_id.lower()
 
     # step2
-    new_id = re.sub('[^a-z0-9-_.]', '', new_id)
+    new_id = re.sub('[^a-z0-9\-_.]', '', new_id)
 
     # step3 마침표가 마침표를 뜻하는게 아니라 이스케이프문자를 활용해야 한다 그냥 . 으로 하면 모든 문자를 반복
     new_id = re.sub(r"(\.)\1+", r"\1", new_id)
